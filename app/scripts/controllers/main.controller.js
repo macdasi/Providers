@@ -18,8 +18,16 @@
     var vm = this;
     vm.title = 'Hello';
     vm.Level = unicornLauncher.launchedCount;
+    vm.isHappy = true;
+    vm.launch = launch;
 
-    unicornLauncher.launch ();
+    function launch(){
+      unicornLauncher.launch();
+      vm.Level = unicornLauncher.launchedCount;
+    }
+
+
+    unicornLauncher.launch();
   }
 
 }());

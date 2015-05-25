@@ -5,18 +5,18 @@ describe('Controller: AboutCtrl', function () {
   // load the controller's module
   beforeEach(module('providersApp'));
 
-  var AboutCtrl,
+  var AboutController,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    AboutCtrl = $controller('AboutCtrl', {
+    AboutController = $controller('AboutController', {
       $scope: scope
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+    expect(AboutController.title).toBe('Hello');
   });
 });
